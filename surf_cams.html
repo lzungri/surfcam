@@ -76,7 +76,7 @@ table.content {
     <td>
       <div class="divresizable" id="cams"></div>
     </td>
-    <td valign="top" width="45%" bgcolor="#b3e3e0" style="padding:30px;">
+    <td valign="top" width="45%" bgcolor="#b3e3e0" style="padding:15px;">
       <table width="100%" height="100%" valign="top">
         <tr><td>
           <iframe id="content" width="100%" height="100%" allowTransparency="false" scrolling="yes" style="border:none;"></iframe>
@@ -125,9 +125,9 @@ table.content {
         function buttonOnClick(self, url, url2) {
           content.src = url;
           content2.src = url2;
-          self.parentElement.parentElement.style = "padding: 10px; background-color:#b3e3e0;";
+          self.parentElement.parentElement.style = "padding: 20px; background-color:#b3e3e0;";
           if (selectedDiv != null && selectedDiv != self.parentElement.parentElement) {
-            selectedDiv.style = "padding: 10px; background-color:#f7ffff;";
+            selectedDiv.style = "padding: 20px; background-color:#f7ffff;";
           }
           selectedDiv = self.parentElement.parentElement;
         }
@@ -136,7 +136,7 @@ table.content {
         streamName.innerHTML = '<button class="button" onclick="buttonOnClick(this, &quot;' + infoURL + '&quot;, &quot;' + infoURL2 + '&quot;);"><span>' + name + '</span></button>';
 
         var vidContainer = document.createElement("div");
-        vidContainer.setAttribute("style", "padding: 10px; ");
+        vidContainer.setAttribute("style", "padding: 20px; ");
         vidContainer.setAttribute("width", "100%");
         vidContainer.setAttribute("height", "100%");
         vidContainer.appendChild(streamName);
