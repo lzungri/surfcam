@@ -76,8 +76,16 @@ table.content {
     <td>
       <div class="divresizable" id="cams"></div>
     </td>
-    <td valign="top" width="60%" bgcolor="blue" style="padding:30px;">
-      <iframe id="content" width="100%" height="100%" allowTransparency="false" scrolling="yes" style="border:none;"></iframe>
+    <td valign="top" width="45%" bgcolor="#b3e3e0" style="padding:30px;">
+      <table width="100%" height="100%" valign="top">
+        <tr><td>
+          <iframe id="content" width="100%" height="100%" allowTransparency="false" scrolling="yes" style="border:none;"></iframe>
+        </td></tr>
+        <tr><td>
+          <br><br><br>
+          <iframe id="content2" width="100%" height="100%" allowTransparency="false" scrolling="yes" style="border:none;"></iframe>
+        </td></tr>
+      </table>
     </td>
   </tr>
 </table>
@@ -86,26 +94,26 @@ table.content {
   var streams = {
     "Jack's": ["https://cams.cdn-surfline.com/cdn-wc/wc-jacks/playlist.m3u8", "https://www.surfline.com/surf-report/jack-s/5842041f4e65fad6a770880b"],
     "38th Av": ["https://cams.cdn-surfline.com/cdn-wc/wc-thirtyeightov/playlist.m3u8", "https://www.surfline.com/surf-report/38th-ave-overview/5a74f236588618001a6511f8"],
-    "Pleasure point": ["https://cams.cdn-surfline.com/cdn-wc/wc-pleasurept/playlist.m3u8", "https://www.surfline.com/surf-report/pleasure-point/5842041f4e65fad6a7708807"],
-    "Pleasure point overview": ["https://cams.cdn-surfline.com/cdn-wc/wc-pleasureptov/playlist.m3u8", "https://www.surfline.com/surf-report/pleasure-point-overview/5cc8b6e886e42100015d1f87"],
-    "Cowells": ["https://cams.cdn-surfline.com/cdn-wc/wc-cowells/playlist.m3u8", "https://www.surfline.com/surf-report/cowells/5842041f4e65fad6a7708806"],
-    "Cowells overview": ["https://cams.cdn-surfline.com/cdn-wc/wc-cowellsov/playlist.m3u8", "https://www.surfline.com/surf-report/cowells-overview/584204214e65fad6a7709d20"],
-    "Manresa": ["https://cams.cdn-surfline.com/cdn-wc/wc-manresa/playlist.m3u8", "https://www.surfline.com/surf-report/manresa/5842041f4e65fad6a770898e"],
-    "Pacifica": ["https://cams.cdn-surfline.com/cdn-wc/wc-pacificalindamar/playlist.m3u8", "https://www.surfline.com/surf-report/pacifica-linda-mar/5842041f4e65fad6a7708976"],
-    "Pacifica overview": ["https://cams.cdn-surfline.com/cdn-wc/wc-pacificaov/playlist.m3u8", "https://www.surfline.com/surf-report/pacifica-overview/5cbf8d85e7b15800014909e8"],
-    "Steamer Lane Close up": ["https://cams.cdn-surfline.com/cdn-wc/wc-steamerfixed/playlist.m3u8", "https://www.surfline.com/surf-report/steamer-lane-close-up-/584204214e65fad6a7709ce1"],
-    "Steamer Lane": ["https://cams.cdn-surfline.com/cdn-wc/wc-steamer/playlist.m3u8", "https://www.surfline.com/surf-report/steamer-lane/5842041f4e65fad6a7708805"],
+    "Pleasure point": ["https://cams.cdn-surfline.com/cdn-wc/wc-pleasurept/playlist.m3u8", "https://www.surfline.com/surf-report/pleasure-point/5842041f4e65fad6a7708807", "https://magicseaweed.com/Pleasure-Point-Surf-Report/644/"],
+    "Pleasure point overview": ["https://cams.cdn-surfline.com/cdn-wc/wc-pleasureptov/playlist.m3u8", "https://www.surfline.com/surf-report/pleasure-point-overview/5cc8b6e886e42100015d1f87", "https://magicseaweed.com/Pleasure-Point-Surf-Report/644/"],
+    "Cowells": ["https://cams.cdn-surfline.com/cdn-wc/wc-cowells/playlist.m3u8", "https://www.surfline.com/surf-report/cowells/5842041f4e65fad6a7708806", "https://magicseaweed.com/Cowells-Surf-Report/4752/"],
+    "Cowells overview": ["https://cams.cdn-surfline.com/cdn-wc/wc-cowellsov/playlist.m3u8", "https://www.surfline.com/surf-report/cowells-overview/584204214e65fad6a7709d20", "https://magicseaweed.com/Cowells-Surf-Report/4752/"],
+    "Manresa": ["https://cams.cdn-surfline.com/cdn-wc/wc-manresa/playlist.m3u8", "https://www.surfline.com/surf-report/manresa/5842041f4e65fad6a770898e", "https://magicseaweed.com/Manresa-Beach-Surf-Report/258/"],
+    "Pacifica": ["https://cams.cdn-surfline.com/cdn-wc/wc-pacificalindamar/playlist.m3u8", "https://www.surfline.com/surf-report/pacifica-linda-mar/5842041f4e65fad6a7708976", "https://magicseaweed.com/Linda-Mar-Pacifica-Surf-Report/819/"],
+    "Pacifica overview": ["https://cams.cdn-surfline.com/cdn-wc/wc-pacificaov/playlist.m3u8", "https://www.surfline.com/surf-report/pacifica-overview/5cbf8d85e7b15800014909e8", "https://magicseaweed.com/Linda-Mar-Pacifica-Surf-Report/819/"],
+    "Steamer Lane Close up": ["https://cams.cdn-surfline.com/cdn-wc/wc-steamerfixed/playlist.m3u8", "https://www.surfline.com/surf-report/steamer-lane-close-up-/584204214e65fad6a7709ce1", "https://magicseaweed.com/Steamer-Lane-Surf-Report/163/"],
+    "Steamer Lane": ["https://cams.cdn-surfline.com/cdn-wc/wc-steamer/playlist.m3u8", "https://www.surfline.com/surf-report/steamer-lane/5842041f4e65fad6a7708805", "https://magicseaweed.com/Steamer-Lane-Surf-Report/163/"],
   };
 
   var content = document.getElementById("content");
-  content.contentWindow.document.getElementsByTagName("div");
-
+  var content2 = document.getElementById("content2");
   var selectedDiv = null;
 
   if(Hls.isSupported()) {
     for (var name in streams) {
         var streamURL = streams[name][0];
-        var infoURL = streams[name][1];
+        var infoURL = streams[name].length > 1 ? streams[name][1] : "";
+        var infoURL2 = streams[name].length > 2 ? streams[name][2] : "";
 
         var video = document.createElement("video");
         video.setAttribute("class", "container");
@@ -114,22 +122,23 @@ table.content {
         video.setAttribute("autoplay", "");
 
 
-        function buttonOnClick(self, url) {
-          var c = document.getElementById("content");
-          c.src = url;
-          self.parentElement.parentElement.style = "padding: 20px; background-color:blue";
+        function buttonOnClick(self, url, url2) {
+          content.src = url;
+          content2.src = url2;
+          self.parentElement.parentElement.style = "padding: 10px; background-color:#b3e3e0;";
           if (selectedDiv != null && selectedDiv != self.parentElement.parentElement) {
-            selectedDiv.style = "padding: 20px; background-color:#f7ffff";
+            selectedDiv.style = "padding: 10px; background-color:#f7ffff;";
           }
           selectedDiv = self.parentElement.parentElement;
         }
 
         var streamName = document.createElement("div");
-        streamName.innerHTML = '<button class="button" onclick="buttonOnClick(this, &quot;' + infoURL + '&quot;);"><span>' + name + '</span></button>';
+        streamName.innerHTML = '<button class="button" onclick="buttonOnClick(this, &quot;' + infoURL + '&quot;, &quot;' + infoURL2 + '&quot;);"><span>' + name + '</span></button>';
 
         var vidContainer = document.createElement("div");
-        vidContainer.setAttribute("style", "padding: 20px; ");
+        vidContainer.setAttribute("style", "padding: 10px; ");
         vidContainer.setAttribute("width", "100%");
+        vidContainer.setAttribute("height", "100%");
         vidContainer.appendChild(streamName);
         vidContainer.appendChild(video);
 
